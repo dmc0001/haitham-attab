@@ -1,15 +1,45 @@
 import { navLinks } from "../constatns";
-import { useState } from "react";
+import { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isNavbarVisible, setNavbarVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
 
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const isScrollingDown = prevScrollPos < currentScrollPos;
+
+      setNavbarVisible(
+        currentScrollPos < 10 || // Show the navbar if the scroll position is less than 10px
+        (isScrollingDown && currentScrollPos > 10) // Show the navbar when scrolling up after passing 10px
+      );
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
+
+
+
   return (
-    <header className="w-full h-[66px] flex border-b-[0.5px] border-solid border-[#64FFDA]">
+    <header
+      className={`bg-[#0A192F] w-full h-[66px] flex border-b-[0.5px] border-solid border-[#64FFDA] transition-all ${
+        !isNavbarVisible && 'transform -translate-y-full'
+      } fixed top-0 left-0 right-0 z-50`}
+    >
       <div className="flex h-full flex-col justify-center ml-4">
         <p className="text-[#64FFDA] text-center text-[22px] md:text-[27px] lg:text-[30px] font-[400] font-fira">
           Haithem Attab
