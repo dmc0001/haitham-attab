@@ -4,8 +4,8 @@ const Exp = () => {
     <div className="ml-[7px]">
       <div className="flex gap-4 items-center mb-20">
         <div className="flex gap-3 items-baseline ">
-          <span className="text-[#64FFDA] font-fira text-[24px]">02.</span>
-          <span className="text-[#fff] font-fira text-[32px]">
+          <span className="text-[#64FFDA] font-fira text-[20px] md:text-[24px]">02.</span>
+          <span className="text-[#fff] font-fira text-[26px] md:text-[32px]">
             My experience
           </span>
         </div>
@@ -20,7 +20,7 @@ const Exp = () => {
 
       {experiences.map((exp, index) => {
         return (
-          <div key={index} className="flex gap-[35px]">
+          <div key={index} className="flex gap-[20px] sm:gap-[35px]">
             <div className="flex flex-col items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ const Exp = () => {
                 </span>{" "}
               </h1>
 
-              <div className="flex flex-col gap-[3px] ml-[35px]">
+              <div className="flex flex-col gap-[25px] sm:gap-[10px] ml-[20px] sm:ml-[35px]">
                 {exp.details.map((det, index) => {
                   return (
                     <div key={index} className="flex gap-[8px] items-center">
@@ -108,7 +108,7 @@ const Exp = () => {
                         />
                       </svg>
 
-                      <p className="font-fira text-[12px] leading-[1.2rem] w-[363px]">
+                      <p className="font-fira text-[12px] leading-[1.2rem] sm:w-[363px]">
                         {det}
                       </p>
                     </div>

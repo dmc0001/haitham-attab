@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="flex-grow"></div>
 
       {/* Hamburger menu icon for md and small devices */}
-      <div className="md:hidden cursor-pointer flex items-center" onClick={toggleMenu}>
+      <div className="md:hidden cursor-pointer flex items-center mr-4" onClick={toggleMenu}>
         <svg
           className="h-6 w-6 text-[#64FFDA] block"
           fill="none"

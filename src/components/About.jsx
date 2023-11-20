@@ -4,7 +4,7 @@ const About = () => {
       <div className="flex gap-4 items-center">
         <div className="flex gap-3 items-baseline ">
           <span className="text-[#64FFDA] font-fira text-[20px] md:text-[24px]">01.</span>
-          <span className="text-[#fff] font-fira text-[20px] md:text-[24px]">About</span>
+          <span className="text-[#fff] font-fira text-[26px] md:text-[32px]">About</span>
         </div>
         <div
           className="flex-grow h-[1px]"

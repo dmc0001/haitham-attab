@@ -2,10 +2,10 @@ const Contact = () => {
   return (
     <div className="flex flex-col justify-center items-center mb-52">
       <div className="flex gap-3 items-baseline">
-        <span className="text-[#64FFDA] font-fira text-[24px]">04.</span>
-        <span className="text-[#fff] font-fira text-[32px]">Wanna talk ?</span>
+        <span className="text-[#64FFDA] font-fira text-[20px] md:text-[24px]">04.</span>
+        <span className="text-[#fff] font-fira text-[26px] md:text-[32px]s">Wanna talk ?</span>
       </div>
-      <p className="text-center text-[#CCD6F6] font-fira text-[24px] w-[782px]">
+      <p className="text-center text-[#CCD6F6] font-fira text-[20px] md:text-[24px] md:w-[782px]">
         <br />
         <br />
         <br /> I’m always looking for new opportunities and in various form:

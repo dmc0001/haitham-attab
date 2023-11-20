@@ -4,8 +4,8 @@ const Projects = () => {
     <div>
       <div className="flex gap-4 items-center mb-20">
         <div className="flex gap-3 items-baseline ">
-          <span className="text-[#64FFDA] font-fira text-[24px]">03.</span>
-          <span className="text-[#fff] font-fira text-[32px]">My projects</span>
+          <span className="text-[#64FFDA] font-fira text-[20px] md:text-[24px]">03.</span>
+          <span className="text-[#fff] font-fira text-[26px] md:text-[32px]">My projects</span>
         </div>
         <div
           className="flex-grow h-[1px]"
@@ -16,15 +16,15 @@ const Projects = () => {
         ></div>
       </div>
 
-      <div className="flex flex-wrap gap-[45px]">
+      <div className="flex flex-wrap gap-[35px] lg:gap-[45px] justify-center">
         {projects.map((project, index) => {
           return (
             <div
               key={index}
-              className="w-[330px] h-[380px] bg-[#112240] rounded-[5px] relative flex items-center "
+              className=" w-[280px] h-[322px] lg:w-[330px] lg:h-[380px] bg-[#112240] rounded-[5px] relative flex items-center "
             >
               <svg
-                className="absolute top-[30px] left-[20px]"
+                className="absolute top-[20px] left-[20px]"
                 xmlns="http://www.w3.org/2000/svg"
                 width="37"
                 height="37"
@@ -37,10 +37,10 @@ const Projects = () => {
                 />
               </svg>
               <div className="flex flex-col justify-center mx-5">
-                <h1 className="text-[#CCD6F6] text-[21px] font-fira font-[700] mb-4">
+                <h1 className="text-[#CCD6F6] text-[18px] lg:text-[21px] font-fira font-[700] mb-4">
                   {project.title}
                 </h1>
-                <p className="text-[#A8B2D1] text-[17px] font-fira">
+                <p className="text-[#A8B2D1] lg:text-[17px] font-fira">
                   {project.desc}
                 </p>
                 <span className="text-[#C4C4C4] text-[14px] font-fira absolute bottom-[30px] left-5">
