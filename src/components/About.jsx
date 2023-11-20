@@ -3,8 +3,8 @@ const About = () => {
     <div className="ml-[8px]">
       <div className="flex gap-4 items-center">
         <div className="flex gap-3 items-baseline ">
-          <span className="text-[#64FFDA] font-fira text-[24px]">01.</span>
-          <span className="text-[#fff] font-fira text-[32px]">About</span>
+          <span className="text-[#64FFDA] font-fira text-[20px] md:text-[24px]">01.</span>
+          <span className="text-[#fff] font-fira text-[20px] md:text-[24px]">About</span>
         </div>
         <div
           className="flex-grow h-[1px]"
@@ -14,8 +14,8 @@ const About = () => {
           }}
         ></div>
       </div>
-      <div className="flex items-center gap-[83px]">
-        <p className="font-fira text-[18px] leading-normal w-[666px]">
+      <div className="flex items-center gap-[26px] lg:gap-[83px] flex-col-reverse lg:flex-row mt-12 lg:mt-0">
+        <p className="font-fira text-[14px] md:text-[16px] lg:text-[18px] leading-normal lg:w-[666px]">
           <br /> <br />
           Hello! I’m Baptiste and my passion is creating all sorts of things
           related to new technologies. I’m passionate about Web development and
@@ -38,13 +38,12 @@ const About = () => {
         </p>
 
         <div className="relative">
-          <div className="w-[365px] h-[406px] bg-[#64FFDA] absolute top-[11px] left-[11px]"></div>
+          <div className="w-[250px] h-[275px] md:w-[310px] md:h-[345px] lg:w-[365px] lg:h-[406px] bg-[#64FFDA] absolute top-[11px] left-[11px]"></div>
           <svg
-            className="fill-[#C4C4C4] relative bg-[#64FFDA]"
+            className="fill-[#C4C4C4] relative bg-[#C4C4C4] w-[250px] h-[275px] md:w-[310px] md:h-[345px] lg:w-[365px] lg:h-[406px]"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            width="365"
-            height="406"
+
           >
             <path d="M0 0H365V406H0V0Z" fill="#C4C4C4" />
           </svg>
