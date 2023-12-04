@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="ml-[8px]">
+    <div id="about" className="ml-[8px]">
       <div className="flex gap-4 items-center">
         <div className="flex gap-3 items-baseline ">
           <span className="text-[#64FFDA] font-fira text-[20px] md:text-[24px]">01.</span>

@@ -1,7 +1,7 @@
 import { experiences } from "../constatns";
 const Exp = () => {
   return (
-    <div className="ml-[7px]">
+    <div id="experience" className="ml-[7px]">
       <div className="flex gap-4 items-center mb-20">
         <div className="flex gap-3 items-baseline ">
           <span className="text-[#64FFDA] font-fira text-[20px] md:text-[24px]">02.</span>

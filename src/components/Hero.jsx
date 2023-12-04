@@ -19,11 +19,10 @@ const Hero = () => {
         <br />
       </p>
       <div className="w-full flex justify-center">
-      <button className="text-[#64FFDA] border-[0.5px] font-fira text-[14px] w-fit p-3 rounded-[5px] border-[#64FFDA]">
-        Download my resume !
-      </button>
+        <button className="text-[#64FFDA] border-[0.5px] font-fira text-[14px] w-fit p-3 rounded-[5px] border-[#64FFDA] hover:bg-[#2b9179] hover:text-white hover:border-white ">
+          Download my resume !
+        </button>
       </div>
-
     </main>
   );
 };

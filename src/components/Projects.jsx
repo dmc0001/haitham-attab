@@ -1,7 +1,7 @@
 import { projects } from "../constatns";
 const Projects = () => {
   return (
-    <div>
+    <div id="projects">
       <div className="flex gap-4 items-center mb-20">
         <div className="flex gap-3 items-baseline ">
           <span className="text-[#64FFDA] font-fira text-[20px] md:text-[24px]">03.</span>
