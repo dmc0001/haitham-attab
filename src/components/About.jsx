@@ -1,3 +1,4 @@
+import Avatar from "../assets/avatar.jpg"
 const About = () => {
   return (
     <div id="about" className="ml-[8px]">
@@ -37,16 +38,12 @@ const About = () => {
           <br /> <br />
         </p>
 
-        <div className="relative">
-          <div className="w-[250px] h-[275px] md:w-[310px] md:h-[345px] lg:w-[365px] lg:h-[406px] bg-[#64FFDA] absolute top-[11px] left-[11px]"></div>
-          <svg
-            className="fill-[#C4C4C4] relative bg-[#C4C4C4] w-[250px] h-[275px] md:w-[310px] md:h-[345px] lg:w-[365px] lg:h-[406px]"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-
-          >
-            <path d="M0 0H365V406H0V0Z" fill="#C4C4C4" />
-          </svg>
+        <div className="relative w-[250px] h-[275px] md:w-[310px] md:h-[345px] lg:w-[365px] lg:h-[406px]">
+          <div className=" bg-[#64FFDA] absolute top-[11px] left-[11px] w-full h-full"></div>
+          <img
+            className="relative bg-[#C4C4C4] w-full h-full"
+             src={Avatar}
+          />
         </div>
       </div>
     </div>
