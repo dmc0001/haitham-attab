@@ -19,7 +19,7 @@ const Contact = () => {
         Freelance, Part-time or Contract. <br /> <br />
         <br />
       </p>
-      <a href="https://www.facebook.com/lorenzo.medici.3910" target="_blank" rel="noreferrer">
+      <a href="https://www.linkedin.com/in/haitham-attab-99435a21b/" target="_blank" rel="noreferrer">
         <button className="text-[#64FFDA] border-[0.5px] font-fira text-[14px] w-fit py-3 px-12 rounded-[5px] border-[#64FFDA] transition-all duration-300 hover:bg-[#2b9179] hover:text-white hover:border-white"
                 
         >

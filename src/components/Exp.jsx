@@ -44,7 +44,7 @@ const Exp = () => {
                   height="15.6777"
                   transform="rotate(-45 1.41421 12.5)"
                   stroke="#64FFDA"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
               </svg>
               <div
@@ -77,7 +77,7 @@ const Exp = () => {
                     height="15.6777"
                     transform="rotate(-45 1.41421 12.5)"
                     stroke="#64FFDA"
-                    stroke-width="2"
+                    strokeWidth="2"
                   />
                 </svg>
               )}

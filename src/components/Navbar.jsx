@@ -40,7 +40,7 @@ const Navbar = () => {
     >
       <div className="flex h-full flex-col justify-center ml-4">
         <p className="text-[#64FFDA] text-center text-[22px] md:text-[27px] lg:text-[30px] font-[400] font-fira">
-          Haithem Attab
+          Haitham Attab
         </p>
       </div>
 

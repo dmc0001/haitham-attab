@@ -18,23 +18,20 @@ const About = () => {
       <div className="flex items-center gap-[26px] lg:gap-[83px] flex-col-reverse lg:flex-row mt-12 lg:mt-0">
         <p className="font-fira text-[14px] md:text-[16px] lg:text-[18px] leading-normal lg:w-[666px]">
           <br /> <br />
-          Hello! I’m Baptiste and my passion is creating all sorts of things
-          related to new technologies. I’m passionate about Web development and
-          I worked for the first time as a Front-End dev in 2018 at CAUE Du
-          Nord. <br /> <br /> I’ve started university in 2018 at Epitech Lille
-          (school of ….) and since then I’ve had a lot of opportunities to work
-          on various technologies such as React Native, Swift, VueJs, Unity,
-          C++, C# and a lot more. I also have had the opportunity to work as a
-          DevOps during my scholarship. <br /> <br /> This year I had the
-          opportunity to spend 6 month in California at
-          <span className="text-[#64FFDA]">CSUSM</span> where my major was
-          Computer Science. I ended this semester with the award of the
-          <span className="text-[#64FFDA]">Outstanding studient</span> for my
-          dedication and work in this university. <br /> <br /> And finally I
-          started to <span className="text-[#64FFDA]">stream</span> a part of
-          what I do : my training, my projects and my ideas on Twitch. For me
-          it’s a good way to share with other people my journey and maybe to
-          change the way people can see tech jobs & life.
+          Hello! I’m Haitham and my passion is creating all sorts of things
+          related to new technologies. I’m passionate about Mobile development and
+          I worked for the first time as a Mobile dev in 2023 at DZExpert.
+          <br /> <br /> I started university in 2020 at Yahia Fares University, and since then
+          I’ve had a lot of opportunities to work 
+          on various technologies, including Dart, Kotlin, and Java. Throughout my academic journey,
+          I’ve gained hands-on experience in mobile app development, working with
+          frameworks such as Android SDK and Flutter. <br /> <br /> This year I had the
+          opportunity to spend 6 month in Algiers at
+          <span className="text-[#64FFDA]"> Sphinx itnernational</span> where I further developed
+          my skills in mobile app development, worked with a talented team, and
+          <span className="text-[#64FFDA]"> contributed to various projects</span> During this time, 
+          I was exposed to a wide range of technologies, development methodologies, and real-world challenges that helped me grow both professionally and personally. <br /> <br /> <span className="text-[#64FFDA]">what I do: </span>
+          I’m always looking for ways to improve my skills and stay updated with the latest trends in technology, and I’m excited to continue my journey in mobile development while exploring new opportunities.
           <br /> <br />
         </p>
 
