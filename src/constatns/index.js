@@ -68,12 +68,12 @@ export const projects = [
   {
     title: "Find ead client",
     desc: "This app helps users discover the best deals and nearby shops, offering a seamless experience for finding local promotions and discounts.",
-    tech: ["Flutter | Firebase | FMC | MVVM | Stacked| Google Maps"],
+    tech: ["Flutter | Firebase | FCM | MVVM | Stacked| Google Maps"],
   },
   {
     title: "Find ead bussiness",
     desc: "This platform empowers businesses to push deals and promotions to a wide audience, helping them enhance visibility and attract more customers",
-    tech: ["Flutter | Firebase | FMC | MVVM | Stacked"],
+    tech: ["Flutter | Firebase | FCM | MVVM | Stacked"],
   },
   {
     title: "Math quiz",
