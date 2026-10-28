@@ -5,19 +5,36 @@ import Exp from "./components/Exp";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
-function App() {
+export default function App() {
   return (
     <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
       <Navbar />
-      <div className=" mx-[6%] md:ml-[90px] md:mr-[80px] lg:ml-[140px] lg:mr-[115px] flex flex-col gap-32 md:gap-44 lg:gap-52">
+      <main id="main">
         <Hero />
+        <Projects />
         <About />
         <Exp />
-        <Projects />
         <Contact />
-      </div>
+      </main>
+      <footer className="footer container">
+        <a
+          className="wordmark"
+          href="#home"
+          aria-label="Haitham Attab, back to top"
+        >
+          ha<span>.</span>
+        </a>
+        <p>Thoughtfully built. Always improving.</p>
+        <a href="#home">
+          Back to top <span aria-hidden="true">↑</span>
+        </a>
+        <span className="copyright">
+          © {new Date().getFullYear()} Haitham Attab
+        </span>
+      </footer>
     </>
   );
 }
-
-export default App;

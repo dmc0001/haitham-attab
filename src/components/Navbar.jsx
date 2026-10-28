@@ -1,96 +1,96 @@
-import { navLinks } from "../constatns";
-import { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import { useEffect, useState } from "react";
+import { navLinks, profile } from "../data/portfolio";
+import Resume from "../assets/resume-haitham.pdf";
+import { icons } from "./Icons";
 
-
-const Navbar = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isNavbarVisible, setNavbarVisible] = useState(true);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
-
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("");
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      const isScrollingDown = prevScrollPos > currentScrollPos;
-
-      setNavbarVisible(
-        currentScrollPos < 10 || // Show the navbar if the scroll position is less than 10px
-          (isScrollingDown && currentScrollPos > 10) // Show the navbar when scrolling up after passing 10px
-      );
-
-      setPrevScrollPos(currentScrollPos);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: "-20% 0px -55% 0px" },
+    );
+    document
+      .querySelectorAll("main section[id]")
+      .forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+  useEffect(() => {
+    if (!open) return;
+    const close = (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        document.getElementById("menu-toggle")?.focus();
+      }
     };
-
-    window.addEventListener("scroll", handleScroll);
-
+    const resize = () => {
+      if (window.innerWidth > 760) setOpen(false);
+    };
+    document.addEventListener("keydown", close);
+    window.addEventListener("resize", resize);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("keydown", close);
+      window.removeEventListener("resize", resize);
     };
-  }, [prevScrollPos]);
-
+  }, [open]);
   return (
-    <header
-      className={`bg-[#0A192F] w-full h-[66px] flex border-b-[0.5px] border-solid border-[#64FFDA] transition-all ${
-        !isNavbarVisible && "transform -translate-y-full"
-      } fixed top-0 left-0 right-0 z-50`}
-    >
-      <div className="flex h-full flex-col justify-center ml-4">
-        <p className="text-[#64FFDA] text-center text-[22px] md:text-[27px] lg:text-[30px] font-[400] font-fira">
-          Haitham Attab
-        </p>
-      </div>
-
-      <div className="flex-grow"></div>
-
-      {/* Hamburger menu icon for md and small devices */}
-      <div
-        className="md:hidden cursor-pointer flex items-center mr-4"
-        onClick={toggleMenu}
-      >
-        <svg
-          className="h-6 w-6 text-[#64FFDA] block"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+    <header className="site-header">
+      <div className="nav-shell container">
+        <a
+          className="brand"
+          href="#home"
+          onClick={() => setOpen(false)}
+          aria-label="Haitham Attab, home"
         >
-          {/* Hamburger icon */}
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16m-7 6h7"
-          ></path>
-        </svg>
-      </div>
-
-      {/* Menu items for large devices */}
-      <div className="hidden md:flex h-full justify-center gap-16 mr-8">
-        {navLinks.map((link, index) => (
-          <Link to={link.id} key={link.id} smooth duration={500} className="h-full flex gap-3 items-center cursor-pointer hover:scale-[1.02]">
-            <span className="text-[#64FFDA] font-fira">0{index + 1}.</span>
-            <span className="font-fira ">{link.title}</span>
-          </Link>
-        ))}
-      </div>
-
-      {/* Menu items for md and small devices */}
-      {isMenuOpen && (
-        <div className="md:hidden absolute top-[66px] left-0 w-full bg-black text-white">
-          {navLinks.map((link, index) => (
-            <Link to={link.id} smooth duration={500} key={link.id} className="p-4 block" onClick={toggleMenu}>
-              <span className="text-[#64FFDA] font-fira">0{index + 1}.</span>
-              <span className="font-fira ">{link.title}</span>
-            </Link>
+          <span className="wordmark">
+            ha<span>.</span>
+          </span>
+          <span className="brand-name">
+            {profile.name}
+            <span>{profile.role}</span>
+          </span>
+        </a>
+        <button
+          id="menu-toggle"
+          className={`menu-toggle ${open ? "is-open" : ""}`}
+          type="button"
+          aria-label={open ? "Close navigation" : "Open navigation"}
+          aria-expanded={open}
+          aria-controls="site-nav"
+          onClick={() => setOpen(!open)}
+        >
+          <span />
+          <span />
+        </button>
+        <nav
+          id="site-nav"
+          className={`site-nav ${open ? "is-open" : ""}`}
+          aria-label="Main navigation"
+        >
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              aria-current={active === link.id ? "location" : undefined}
+              onClick={() => setOpen(false)}
+            >
+              {link.title}
+            </a>
           ))}
-        </div>
-      )}
+          <a
+            className="nav-resume"
+            href={Resume}
+            download="Haitham-Attab-Resume.pdf"
+          >
+            Résumé {icons.diagonal}
+          </a>
+        </nav>
+      </div>
     </header>
   );
-};
-
-export default Navbar;
+}
